@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.testimonials{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+.artem{
+    grid-area: artem;
+
+}
+.artem .test-card__msg{
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    font-size: 1.1rem;
+}
+.artem .test-person__name, .jones .test-person__name{
+    font-size: 1.5rem;
+}
+
+.jones{
+    grid-area: jones;
+    border: 2px solid black;
+    border-radius: 20px;
+
+}
+.jones .test-card__msg{
+    padding: 1rem 0.2rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    font-size: 1.4rem;
+}
+.jackie{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.jackie .card-info{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(27, 27, 27);
+    color: white;
+    border-radius: 0px 0px 20px 20px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+}
+.jackie .test-person__name{
+    font-size: 2.5rem;
+}
+.jackie .test-person__rol{
+    font-size: 1.3rem;
+    color: rgb(124, 124, 124);
+}
+.jackie .test-card__msg{
+    font-size: 1.3rem;
+}
+.artem img, .jones img{
+    width: 6rem;
+    border-radius: 100px;
+}
+.jackie img{
+    width: 100%;
+    
+    border-radius: 20px 20px 0px 0px;
+}
+.test-card{
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.jackie{
+    padding: 0; 
+}
+.card-info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+@media (min-width:768px) {
+    .jackie{
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .jackie img{
+        width: 17rem;
+        border-radius: 20px;
+    }
+    .jackie .card-info{
+        border-radius: 20px;
+    }
+}
+@media (min-width:1024px) {
+    .testimonials{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "artem jones"
+        "jackie jackie";
+    }
+    .artem{
+        grid-area: artem;
+    }
+    .jones{
+        grid-area: jones;
+    }
+    .jackie{
+        grid-area: jackie;
+    }
+}
